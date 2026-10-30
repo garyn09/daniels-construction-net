@@ -1,0 +1,14 @@
+{
+  "name": "daniels-construction-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official Website for Daniel's Construction (Daniels Construction of CP, LLC) — Licensed Septic Tank, Aerobic Treatment Unit (ATU) & Excavation Contractor in Church Point, Louisiana (daniels-construction.net)",
+  "scripts": {
+    "dev": "vite --port 4173",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}
