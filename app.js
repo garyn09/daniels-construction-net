@@ -95,6 +95,55 @@ const FLEET_PHOTOS = [
     title: 'Inside the 11751 LA-365 Fabrication Bay — Precast Concrete & Steel Plants',
     subtitle: 'Foreground: Freshly cast precast concrete tank section with overhead crane spreader bar • Background: Stacked concrete tanks & custom welded steel plant',
     specs: ['3-Ton Bridge Crane', 'Precast Concrete Basin', 'Stacked Concrete Tanks', 'Welded Steel Plant']
+  },
+  {
+    src: './images/steel-plant-davit-crane-end.jpg',
+    badge: 'CUSTOM STEEL PLANT // DAVIT CRANE ARM & PRECAST STACK',
+    title: 'Welded Steel Package Plant with Integrated Davit Crane & Precast Concrete Stack',
+    subtitle: 'Features heavy vertical structural rib stiffeners, integrated swing-arm davit crane for pump lifting, safety yellow ladder & 4-high precast tank stack',
+    specs: ['Swing-Arm Davit Crane', 'Structural Rib Stiffeners', '3-Ton Bridge Crane', 'Commercial Package Plant']
+  },
+  {
+    src: './images/steel-plant-full-profile.jpg',
+    badge: 'CUSTOM STEEL PLANT // FULL SIDE PROFILE UNDER 3-TON CRANE',
+    title: 'Full Side Profile — Custom Fabricated Steel Wastewater Treatment Plant',
+    subtitle: 'Engineered and welded in-house at 11751 LA-365 with industrial corrosion-resistant coating, safety ladder, and hopper-bottom clarifier',
+    specs: ['Full Side Profile', 'Safety Yellow Ladder', 'Heavy Plate Steel', 'Built at 11751 LA-365']
+  },
+  {
+    src: './images/steel-plant-hopper-cone.jpg',
+    badge: 'CUSTOM STEEL PLANT // V-HOPPER CLARIFIER CONE & LIFTING LUGS',
+    title: 'V-Hopper Clarifier Cone, Discharge Port & Heavy Lifting D-Rings',
+    subtitle: 'Precision-welded conical clarifier hopper with welded crane lifting lugs and overhead hoist chain inside the Church Point shop',
+    specs: ['V-Hopper Clarifier', 'Welded Lifting Lugs', 'Discharge Weir Port', 'Commercial Grade']
+  },
+  {
+    src: './images/steel-plant-clarifier-ladder.jpg',
+    badge: 'CUSTOM STEEL PLANT // CLARIFIER HOPPER & PRECAST INVENTORY',
+    title: 'Hopper-Bottom Clarifier End & Precast Concrete Tank Inventory',
+    subtitle: 'Three-quarter shop view showing the angled clarifier hopper, yellow inspection ladder, and cured precast concrete septic tanks',
+    specs: ['Clarifier Hopper', 'Precast Tank Stack', 'In-House Fabrication', '337-684-5394']
+  },
+  {
+    src: './images/precast-wet-pour-steel-form.jpg',
+    badge: 'PRECAST CONCRETE POUR // FRESH WET CONCRETE IN STEEL MOLD',
+    title: 'Freshly Poured Precast Concrete Tank Curing in Heavy Steel Mold',
+    subtitle: 'Poured in-house at 11751 LA-365 using our own batching tower and heavy-gauge steel forms with the American flag flying out front',
+    specs: ['Wet Concrete Pour', 'Heavy Steel Form', 'High-PSI Mix', '11751 LA-365']
+  },
+  {
+    src: './images/precast-basin-rigged-profile.jpg',
+    badge: 'PRECAST RIGGING // DEMOLDED CONCRETE BASIN & 4-HIGH TANK STACK',
+    title: 'Demolded Precast Concrete Tank Section Rigged on Overhead Spreader Bar',
+    subtitle: 'Recessed-panel structural precast concrete tank rigged with wire-rope slings and chain shackles in front of a 4-high cured tank stack',
+    specs: ['Spreader Bar Rigging', 'Recessed Structural Wall', '4-High Tank Stack', 'Anti-Flotation']
+  },
+  {
+    src: './images/precast-basin-air-manifold.jpg',
+    badge: 'PRECAST & PIPING // GALVANIZED AIR MANIFOLDS & POUR HOPPERS',
+    title: 'Precast Tank Section with Galvanized Air-Drop Manifolds & Pour Hoppers',
+    subtitle: 'Shows galvanized aeration drop pipes, lifting spreader beam, residential precast ATU tanks, and steel concrete pouring hoppers',
+    specs: ['Galvanized Air Drops', 'Concrete Pour Hoppers', 'Residential & Commercial', 'Church Point, LA']
   }
 ];
 
@@ -283,6 +332,7 @@ const DIAGNOSTIC_DATA = {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeroPhotoSwitcher();
+  initShopSpotlightSwitcher();
   initFleetGalleryFilter();
   initLightbox();
   initServicesFilter();
@@ -339,6 +389,34 @@ function initHeroPhotoSwitcher() {
       if (heroSub) heroSub.textContent = item.subtitle;
 
       thumbBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}
+
+/* 2a. In-House Manufacturing Spotlight 8-Photo Switcher */
+function initShopSpotlightSwitcher() {
+  const mainImg = document.getElementById('shopSpotlightMainImg');
+  const mainFrame = document.getElementById('shopSpotlightFrame');
+  const mainTag = document.getElementById('shopSpotlightTag');
+  const mainCaption = document.getElementById('shopSpotlightCaption');
+  const thumbs = document.querySelectorAll('.shop-spotlight-thumb');
+
+  if (!mainImg || !thumbs.length) return;
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const idx = Number(btn.dataset.lightboxTarget || 12);
+      const item = FLEET_PHOTOS[idx];
+      if (!item) return;
+
+      mainImg.src = item.src;
+      mainImg.alt = item.title;
+      if (mainFrame) mainFrame.setAttribute('data-lightbox-index', String(idx));
+      if (mainTag) mainTag.textContent = item.badge;
+      if (mainCaption) mainCaption.textContent = `${item.title} — ${item.subtitle}`;
+
+      thumbs.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
     });
   });

@@ -305,8 +305,8 @@
           <button class="filter-btn fleet-filter-btn" data-fleet-filter="trucks">Vacuum, Dump &amp; Crane Fleet</button>
         </div>
 
-        <!-- In-House Manufacturing Spotlight Banner -->
-        <div class="dumpsite-hero-banner" style="margin-bottom: 1.75rem;">
+        <!-- In-House Manufacturing Spotlight Banner (Interactive 8-Photo Showcase) -->
+        <div class="dumpsite-hero-banner" style="margin-bottom: 2rem;">
           <div class="dumpsite-grid">
             <div>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.85rem;">
@@ -317,22 +317,61 @@
                 We Don't Just Install Tanks — We Cast the Concrete &amp; Weld the Steel In-House at 11751 LA-365
               </h3>
               <p class="service-summary">
-                Look inside our main shop bay at <strong>11751 LA-365</strong>: in the foreground sits a freshly demolded, thick-walled <strong>precast concrete tank section</strong> rigged to our overhead crane spreader bar; behind it stand our <strong>multi-stacked precast concrete septic/ATU tanks</strong> alongside a <strong>custom-fabricated steel hopper-bottom package wastewater treatment plant</strong> with the American flag flying out on Highway 365.
+                Inspect all <strong>8 shop angles</strong> on the right: from <strong>fresh wet concrete pours in heavy steel molds</strong>, <strong>demolded precast basins rigged on overhead spreader beams</strong>, and <strong>galvanized air-drop manifolds</strong> to <strong>custom-welded steel hopper-bottom commercial package treatment plants</strong> complete with swing-arm davit cranes and safety yellow ladders.
               </p>
+              <div class="gps-telemetry-box" style="margin: 1rem 0;">
+                <span style="font-size: 0.72rem; color: var(--gold-400); text-transform: uppercase; display: block; margin-bottom: 0.25rem;">
+                  SELECTED SHOP VIEW DETAILS:
+                </span>
+                <span id="shopSpotlightCaption" style="font-size: 0.85rem; color: var(--text-white); font-family: var(--font-sans);">
+                  Inside the 11751 LA-365 Fabrication Bay — Precast Concrete &amp; Steel Plants: Freshly cast precast concrete tank section with overhead crane spreader bar, stacked concrete tanks &amp; custom welded steel plant.
+                </span>
+              </div>
               <div class="fleet-specs" style="border-top: none; padding-top: 0; margin-bottom: 1.25rem;">
-                <span class="spec-chip">Thick-Walled Precast Concrete</span>
+                <span class="spec-chip">Wet-Cast Steel Molds</span>
                 <span class="spec-chip">Zero Groundwater Flotation</span>
-                <span class="spec-chip">Custom Steel Package Plants</span>
-                <span class="spec-chip">Overhead Bridge Crane Rigging</span>
+                <span class="spec-chip">Hopper-Bottom Steel Plants</span>
+                <span class="spec-chip">Swing-Arm Davit Crane</span>
               </div>
               <a href="tel:+13376845394" class="btn btn-gold">
                 📞 Order or Schedule Installation: (337) 684-5394
               </a>
             </div>
-            <div class="fleet-img-wrap" style="border-radius: var(--radius-md); border: 1px solid var(--border-gold); aspect-ratio: 4 / 3; cursor: pointer;" data-lightbox-index="12">
-              <img src="./images/shop-precast-and-steel-lineup.jpg" alt="Inside 11751 LA-365 Shop Bay: Freshly Cast Precast Concrete Tank, Stacked Concrete Tanks, and Welded Steel Treatment Plant" loading="lazy" style="object-position: center 42%;" />
-              <span class="fleet-unit-tag">11751 LA-365 SHOP BAY // CONCRETE + STEEL LINEUP</span>
-              <span class="fleet-zoom-hint">🔍 Click for Full Vertical Shot</span>
+
+            <div>
+              <div class="fleet-img-wrap" id="shopSpotlightFrame" style="border-radius: var(--radius-md); border: 1px solid var(--border-gold); aspect-ratio: 4 / 3; cursor: pointer;" data-lightbox-index="12">
+                <img id="shopSpotlightMainImg" src="./images/shop-precast-and-steel-lineup.jpg" alt="Inside 11751 LA-365 Shop Bay: Freshly Cast Precast Concrete Tank, Stacked Concrete Tanks, and Welded Steel Treatment Plant" loading="lazy" style="object-position: center 45%;" />
+                <span class="fleet-unit-tag" id="shopSpotlightTag">11751 LA-365 SHOP BAY // PRECAST CONCRETE + STEEL PACKAGE PLANT</span>
+                <span class="fleet-zoom-hint">🔍 Click for Full Lightbox</span>
+              </div>
+
+              <!-- 8 Interactive Shop Angle Thumbnails (4 Precast Concrete + 4 Welded Steel) -->
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 0.65rem;" role="group" aria-label="Switch In-House Tank Manufacturing Photo">
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb active" data-lightbox-target="12" title="Shop Bay Lineup: Precast Basin + Stacked Tanks + Steel Plant">
+                  <img src="./images/shop-precast-and-steel-lineup.jpg" alt="Shop Bay Lineup" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="17" title="Fresh Wet Concrete Pour in Heavy Steel Mold">
+                  <img src="./images/precast-wet-pour-steel-form.jpg" alt="Wet Concrete Pour in Steel Form" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="18" title="Demolded Precast Concrete Basin Rigged on Spreader Beam">
+                  <img src="./images/precast-basin-rigged-profile.jpg" alt="Precast Basin Rigged on Spreader Bar" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="19" title="Precast Basin with Galvanized Air Manifolds &amp; Pour Hoppers">
+                  <img src="./images/precast-basin-air-manifold.jpg" alt="Precast Basin &amp; Air Manifolds" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="13" title="Welded Steel Plant with Swing-Arm Davit Crane &amp; Precast Stack">
+                  <img src="./images/steel-plant-davit-crane-end.jpg" alt="Steel Plant Davit Crane &amp; Precast Stack" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="14" title="Full Side Profile of Welded Steel Package Plant Under 3-Ton Crane">
+                  <img src="./images/steel-plant-full-profile.jpg" alt="Full Profile Welded Steel Plant" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="15" title="V-Hopper Clarifier Cone, Discharge Port &amp; Lifting D-Rings">
+                  <img src="./images/steel-plant-hopper-cone.jpg" alt="V-Hopper Clarifier Cone" loading="lazy" />
+                </button>
+                <button type="button" class="hero-thumb-btn shop-spotlight-thumb" data-lightbox-target="16" title="Hopper-Bottom Clarifier End &amp; Yellow Safety Access Ladder">
+                  <img src="./images/steel-plant-clarifier-ladder.jpg" alt="Clarifier Hopper &amp; Safety Ladder" loading="lazy" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
