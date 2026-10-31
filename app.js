@@ -88,6 +88,13 @@ const FLEET_PHOTOS = [
     title: 'Wingate Treatment Site — Domestic Septage Processing Facility',
     subtitle: 'For Information Contact Daniel Wingate • (337) 684-5394 • Hours of Operation: Mon–Fri 7:00 A.M. to 5:00 P.M.',
     specs: ['Daniel Wingate', '(337) 684-5394', 'M–F 7:00 AM – 5:00 PM', 'Domestic Septage']
+  },
+  {
+    src: './images/shop-precast-and-steel-lineup.jpg',
+    badge: '11751 LA-365 SHOP BAY // PRECAST CONCRETE + STEEL PACKAGE PLANT',
+    title: 'Inside the 11751 LA-365 Fabrication Bay — Precast Concrete & Steel Plants',
+    subtitle: 'Foreground: Freshly cast precast concrete tank section with overhead crane spreader bar • Background: Stacked concrete tanks & custom welded steel plant',
+    specs: ['3-Ton Bridge Crane', 'Precast Concrete Basin', 'Stacked Concrete Tanks', 'Welded Steel Plant']
   }
 ];
 
