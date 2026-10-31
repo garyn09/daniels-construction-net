@@ -1,44 +1,93 @@
 /* ==========================================================================
    DANIEL'S CONSTRUCTION (DANIELS CONSTRUCTION OF CP, LLC)
-   12006 Branch Hwy, Church Point, LA 70525 | (337) 684-5394
+   11751 LA-365, Church Point, LA 70525 | (337) 684-5394
    Interactive Application Logic (app.js)
    ========================================================================== */
 
 const FLEET_PHOTOS = [
   {
+    src: './images/hq-main-building-flag.jpg',
+    badge: 'HEADQUARTERS & PLANT // 11751 LA-365, CHURCH POINT, LA',
+    title: "Daniel's Construction Headquarters & Manufacturing Shop (11751 LA-365)",
+    subtitle: 'Banner: "Install Residential Treatment Systems, Maintenance Pump Out & Inspections • 337-684-5394"',
+    specs: ['11751 LA-365', '3-Ton Bridge Crane Shop', 'In-House Tank Plant', '337-684-5394']
+  },
+  {
+    src: './images/aerial-facility-overview.jpg',
+    badge: 'DJI DRONE AERIAL // WINGATE DUMPSITE (30.355829, -92.127946)',
+    title: 'Wingate Treatment Site & Septage Dumpsite — Duck Rd, Sunset, LA 70584',
+    subtitle: 'GPS: 30.355829° N, -92.127946° W (30°21\'20.98"N 92°07\'40.61"W) • Vacuum bays, Klampress dewatering plant, drying beds & LDEQ lagoons',
+    specs: ['GPS: 30.355829, -92.127946', 'Duck Rd, Sunset LA', 'LDEQ AI #165383', 'Permit #LA0124893']
+  },
+  {
+    src: './images/peterbilt-and-mack-front.jpg',
+    badge: 'HEAVY FLEET LINEUP // PETERBILT VACUUM + MACK TANDEM DUMP',
+    title: 'Peterbilt Stainless Vacuum Tanker & Mack Tandem Dump Truck',
+    subtitle: 'Septic & ATU vacuum pumping (337-684-5394) paired with heavy dump truck hauling & dirt work (337-230-7976)',
+    specs: ['Peterbilt Vacuum Fleet', 'Mack Tandem Dump', 'Stainless Tankers', 'Full Dispatch']
+  },
+  {
+    src: './images/custom-steel-treatment-plant.jpg',
+    badge: 'IN-HOUSE FABRICATION // WELDED STEEL PACKAGE TREATMENT PLANTS',
+    title: 'Custom Fabricated Steel Commercial Wastewater Treatment Plant',
+    subtitle: 'Built in-house under our 3-Ton Anchor overhead bridge crane with hopper-bottom clarifier and safety access ladders',
+    specs: ['Custom Steel Plant', 'Hopper Clarifier', 'Commercial & Multi-Family', 'Built in Church Point']
+  },
+  {
+    src: './images/precast-concrete-tanks-shop.jpg',
+    badge: 'ON-SITE PRECAST PLANT // HEAVY CONCRETE SEPTIC & ATU TANKS',
+    title: 'Multi-Stacked Precast Concrete Septic & Treatment Tanks',
+    subtitle: 'Cast and cured in-house using steel forms and high-strength concrete engineered to never float in South Louisiana water tables',
+    specs: ['Precast Concrete', 'Anti-Flotation Mass', 'Steel Form Cast', 'LDH Lic #30733 / #183']
+  },
+  {
+    src: './images/klampress-dewatering-plant.jpg',
+    badge: 'WINGATE TREATMENT SITE // ASHBROOK KLAMPRESS DEWATERING PLANT',
+    title: 'Industrial Ashbrook Simon-Hartley Klampress Belt Filter Press',
+    subtitle: 'Municipal-grade mechanical dewatering facility processing domestic septage with conveyor discharge and polymer automation',
+    specs: ['Ashbrook Klampress', 'Belt Filter Press', 'Septage Dewatering', 'M–F 7AM–5PM']
+  },
+  {
+    src: './images/aerial-treatment-lagoons.jpg',
+    badge: 'DUMPSITE LAGOONS // GPS 30.355829° N, -92.127946° W',
+    title: 'Wingate Treatment Site Lagoons & Dewatering Plant (Duck Rd, Sunset, LA)',
+    subtitle: 'LDEQ-permitted domestic septage dumpsite and surface water compliance facility (AI #165383 / Permit #LA0124893)',
+    specs: ['30.355829, -92.127946', 'Duck Rd, Sunset LA 70584', 'LDEQ #LA0124893', 'M–F 7AM–5PM']
+  },
+  {
+    src: './images/concrete-batch-tower.jpg',
+    badge: 'CONCRETE BATCHING // OVERHEAD HOPPER TOWER & AGGREGATE BAYS',
+    title: 'On-Site Concrete Batching Hopper Tower & Sand/Aggregate Bunkers',
+    subtitle: 'Allows Daniel\'s Construction to control concrete mix quality for precast septic tanks, lids, and distribution boxes',
+    specs: ['Batching Tower', 'Aggregate Bunkers', 'Steel Tank Molds', 'Quality Controlled']
+  },
+  {
+    src: './images/rotary-receiving-screen.jpg',
+    badge: 'SEPTAGE RECEIVING // STAINLESS ROTARY DRUM SCREEN',
+    title: 'Stainless-Steel Rotary Receiving Drum & Control Station',
+    subtitle: 'Screens and conditions incoming domestic septage from our vacuum tanker fleet prior to belt press dewatering',
+    specs: ['Stainless Rotary Drum', 'NEMA Control Panels', 'Automated Processing', 'Wingate Site']
+  },
+  {
     src: './images/fleet-peterbilt-tanker.jpg',
     badge: 'UNIT 01 // PETERBILT TANDEM STAINLESS VACUUM TANKER',
-    title: "Daniel's Construction — Peterbilt Vacuum Tanker (337-684-5394)",
-    subtitle: 'High-Capacity Stainless Septic & Commercial Wastewater Vacuum Fleet — Church Point, LA',
-    specs: ['Peterbilt Tandem Axle', 'Stainless Vacuum Tank', 'LDEQ Permitted Hauler', '337-684-5394']
+    title: "Peterbilt Tandem-Axle Stainless Vacuum Tanker (337-684-5394)",
+    subtitle: 'High-vacuum stainless tanker for residential septic tanks, aerobic trash chambers, and commercial grease traps',
+    specs: ['Peterbilt Chassis', 'Polished Stainless Tank', '337-684-5394', 'Church Point, LA']
   },
   {
-    src: './images/fleet-tanker-and-dump-truck.jpg',
-    badge: 'CHURCH POINT & MIRE FLEET // VACUUM + DUMP + PRECAST PLANT',
-    title: 'Vacuum Tanker, Mack Tandem Dump Truck & Concrete Plant Bay',
-    subtitle: 'Complete vertical integration: Septic pumping (337-684-5394), aggregate/dirt hauling (337-230-7976) & precast concrete batching',
-    specs: ['Mack Tandem Dump Truck', 'On-Site Concrete Conveyor', 'Covered Steel Shop Bay', '337-230-7976']
+    src: './images/jlg-telehandler-yard.jpg',
+    badge: 'HEAVY LIFTING & SITE FLEET // JLG TELEHANDLER & CRANE TRUCKS',
+    title: 'JLG Telehandler, Boom Crane Truck & Earthmoving Yard',
+    subtitle: 'Heavy material handling equipment for loading precast concrete tanks, steel treatment plants, and job-site delivery',
+    specs: ['JLG Telehandler', 'Boom Crane Truck', 'CAT Excavator', 'Lowboy Hauler']
   },
   {
-    src: './images/peterbilt-s68-door-decal.jpg',
-    badge: 'UNIT S68 // PETERBILT CLEAN IDLE VACUUM TRUCK & LDEQ FACILITY',
-    title: "Peterbilt Unit S68 Door Emblem & On-Site Treatment Lagoon",
-    subtitle: 'DANIEL\'S CONSTRUCTION • 337-684-5394 • CHURCH POINT, LA — LDEQ LPDES Permit #LA0124893 Facility in Background',
-    specs: ['Unit S68 Peterbilt', 'Certified Clean Idle', 'LDEQ AI #165383', 'Permit #LA0124893']
-  },
-  {
-    src: './images/vacuum-tank-daniels-684-5394.jpg',
-    badge: 'HEAVY VACUUM RIG // BRUSHED STAINLESS TANK & TRACTOR FLEET',
-    title: "High-Volume Stainless Vacuum Tank ('Daniel's 684-5394') & Site Tractor",
-    subtitle: 'Equipped with heavy-duty 3" & 4" suction lines, diamond-plate decking, and John Deere rural site equipment',
-    specs: ['Heavy Suction Hose Rig', 'Diamond-Plate Deck', 'John Deere Tractor', 'Septic & Grease Traps']
-  },
-  {
-    src: './images/fleet-peterbilt-front-yard.jpg',
-    badge: '12006 BRANCH HWY // EQUIPMENT YARD, LOWBOY & PRECAST STOCK',
-    title: 'Church Point Headquarters Yard, Lowboy Trailer & Precast Stock',
-    subtitle: 'Ready for rapid dispatch across Acadia, St. Landry, Lafayette, Evangeline, Vermilion & Jeff Davis Parishes',
-    specs: ['12006 Branch Hwy', 'Heavy Equipment Lowboy', 'Precast Concrete Stock', 'Acadia Parish HQ']
+    src: './images/wingate-treatment-sign.jpg',
+    badge: 'OFFICIAL FACILITY SIGN // WINGATE TREATMENT SITE',
+    title: 'Wingate Treatment Site — Domestic Septage Processing Facility',
+    subtitle: 'For Information Contact Daniel Wingate • (337) 684-5394 • Hours of Operation: Mon–Fri 7:00 A.M. to 5:00 P.M.',
+    specs: ['Daniel Wingate', '(337) 684-5394', 'M–F 7:00 AM – 5:00 PM', 'Domestic Septage']
   }
 ];
 
@@ -49,7 +98,7 @@ const ANATOMY_COMPONENTS = {
     desc: 'Raw household or commercial wastewater enters the primary precast concrete chamber first. Heavy solids, grit, and non-biodegradable materials settle here as anaerobic sludge, preventing solids from clogging the aeration zone.',
     code: 'LAC Title 51: Minimum 500–1,000+ Gal Pre-Treatment',
     interval: 'Pump Out Every 3–5 Years (Vacuum Truck 337-684-5394)',
-    service: 'Full vacuum pumping, baffle inspection & crust removal by our Peterbilt stainless vacuum fleet.'
+    service: 'Full vacuum pumping, baffle inspection & crust removal by our Peterbilt stainless vacuum fleet, with legal processing at our Wingate Treatment Site.'
   },
   aeration: {
     step: 'STAGE 02 // BIOLOGICAL DIGESTION CORE',
@@ -57,7 +106,7 @@ const ANATOMY_COMPONENTS = {
     desc: 'Oxygen is continuously injected through fine-bubble diffusers at the base of the chamber. Aerobic bacteria thrive in this oxygen-rich environment, rapidly digesting dissolved organic waste into odorless water and carbon dioxide.',
     code: 'NSF/ANSI Standard 40 Class I Certified Treatment',
     interval: 'Inspect Diffusers & Biomass Annually',
-    service: 'Certified installation & service of Delta Whitewater, Delta Enviro-AIRE, and AeroGreen ATU plants (LDH #30733 / #183).'
+    service: 'Certified installation & service of Delta Whitewater, Delta Enviro-AIRE, AeroGreen, and custom steel/precast treatment plants (LDH #30733 / #183).'
   },
   clarifier: {
     step: 'STAGE 03 // QUIESCENT SEPARATION CONE',
@@ -179,7 +228,7 @@ const DIAGNOSTIC_DATA = {
       'Immediately stop running high-volume water appliances (washing machines, bathtubs) to prevent indoor overflow.',
       'Locate your tank cleanout plug or concrete tank lids if known (do not enter or lean into an open septic tank).',
       'If your tank has not been pumped in 3–5+ years, solids have likely accumulated to the outlet baffle height.',
-      'Call Daniel\'s Construction at (337) 684-5394 — our Peterbilt stainless vacuum tanker will pump out the primary and clarifier chambers and inspect your baffles.'
+      'Call Daniel\'s Construction at (337) 684-5394 — our Peterbilt stainless vacuum tanker will pump out the primary and clarifier chambers and process the septage at our LDEQ-permitted Wingate Treatment Site.'
     ],
     recommendation: 'Schedule Vacuum Tanker Pump-Out — (337) 684-5394'
   },
@@ -216,8 +265,8 @@ const DIAGNOSTIC_DATA = {
     summary: 'In Louisiana, utility companies (SLEMCO, Entergy, Cleco) and parish permit offices require a Parish Sanitarian Form LHS-47 sewage approval before permanent electrical power can be connected.',
     steps: [
       'Determine your parish (Acadia, St. Landry, Lafayette, Evangeline, Vermilion, or Jeff Davis) and lot dimensions.',
-      'Contact Daniel\'s Construction early in your site planning — we can build your house/mobile home dirt pad, install your driveway culvert, and size your septic/ATU system together.',
-      'We install your state-approved Delta, AeroGreen, or precast concrete system under LDH Basic License #30733 & Combination License #183.',
+      'Contact Daniel\'s Construction early in your site planning — we manufacture our own precast concrete & steel treatment tanks and haul our own dirt pads.',
+      'We install your state-approved system under LDH Basic License #30733 & Combination License #183.',
       'We coordinate the open-trench Sanitarian inspection so you receive your Final LHS-47 Permit without construction delays.'
     ],
     recommendation: 'Start New Install & LHS-47 Quote — (337) 684-5394'
@@ -227,12 +276,14 @@ const DIAGNOSTIC_DATA = {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeroPhotoSwitcher();
+  initFleetGalleryFilter();
   initLightbox();
   initServicesFilter();
   initAnatomyDiagram();
   initEstimatorCalculator();
   initDiagnosticTool();
   initParishTabs();
+  initFacilityMapSwitcher();
   initFaqAccordion();
   initDispatchForm();
 });
@@ -259,6 +310,7 @@ function initMobileMenu() {
 /* 2. Hero Fleet Photo Switcher */
 function initHeroPhotoSwitcher() {
   const heroImg = document.getElementById('heroMainImg');
+  const heroFrame = document.getElementById('heroPhotoFrame');
   const heroBadge = document.getElementById('heroPhotoBadge');
   const heroTitle = document.getElementById('heroDecalTitle');
   const heroSub = document.getElementById('heroDecalSub');
@@ -274,12 +326,37 @@ function initHeroPhotoSwitcher() {
 
       heroImg.src = item.src;
       heroImg.alt = item.title;
+      if (heroFrame) heroFrame.setAttribute('data-lightbox-index', String(idx));
       if (heroBadge) heroBadge.textContent = item.badge;
       if (heroTitle) heroTitle.textContent = item.title;
       if (heroSub) heroSub.textContent = item.subtitle;
 
       thumbBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
+    });
+  });
+}
+
+/* 2b. Facility & Fleet Gallery Category Filter */
+function initFleetGalleryFilter() {
+  const buttons = document.querySelectorAll('.fleet-filter-btn');
+  const cards = document.querySelectorAll('.fleet-card');
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.fleetFilter;
+      buttons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      cards.forEach((card) => {
+        const cats = (card.dataset.fleetCategory || '').split(' ');
+        if (cat === 'all' || cats.includes(cat)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 }
@@ -339,7 +416,7 @@ function initLightbox() {
 
 /* 4. Services Category Filter */
 function initServicesFilter() {
-  const buttons = document.querySelectorAll('.filter-btn');
+  const buttons = document.querySelectorAll('.service-filter-btn');
   const cards = document.querySelectorAll('.service-card');
   if (!buttons.length || !cards.length) return;
 
@@ -434,7 +511,7 @@ function initEstimatorCalculator() {
     let licenseUsed = 'LDH Basic #30733 / Combination #183';
 
     if (service === 'pumping') {
-      systemTitle = 'Stainless Vacuum Tanker Septic / ATU Pump-Out';
+      systemTitle = 'Stainless Vacuum Tanker Septic / ATU Pump-Out & Dewatering';
       if (bedrooms <= 3) {
         minPrice = 325;
         maxPrice = 475;
@@ -448,24 +525,24 @@ function initEstimatorCalculator() {
         maxPrice = 850;
         capacitySpec = '1,500–2,500+ Gal Large Residential / Commercial Tank';
       }
-      codeRule = 'LDEQ Permitted Septage Hauler & Facility (AI #165383 / LA0124893)';
-      licenseUsed = 'Peterbilt Vacuum Fleet (337-684-5394) • LDEQ #LA0124893';
+      codeRule = 'Processed at Wingate Treatment Site (LDEQ AI #165383 / LA0124893)';
+      licenseUsed = 'Peterbilt Vacuum Fleet (337-684-5394) • Klampress Dewatering';
     } else if (service === 'atu_install') {
       if (bedrooms <= 3) {
-        systemTitle = '500 GPD NSF-40 Aerobic Treatment Unit (Delta Whitewater DF50 / AeroGreen)';
+        systemTitle = '500 GPD NSF-40 Aerobic Treatment Unit (Precast / Delta / AeroGreen)';
         minPrice = 5200;
         maxPrice = 6800;
         capacitySpec = '500 Gallons/Day (GPD) • Primary Trash Chamber + Aeration + Clarifier';
       } else if (bedrooms === 4) {
-        systemTitle = '600–750 GPD High-Capacity ATU System (Delta DF60 / DF75)';
+        systemTitle = '600–750 GPD High-Capacity ATU System (In-House Precast / Delta)';
         minPrice = 6200;
         maxPrice = 7900;
         capacitySpec = '600–750 GPD Rated • Heavy Precast Tank + High-Output Linear Aerator';
       } else {
-        systemTitle = '1,000+ GPD Heavy Residential / Commercial Aerobic Treatment Plant';
+        systemTitle = '1,000+ GPD Custom Steel or Multi-Chamber Commercial Package Plant';
         minPrice = 7800;
-        maxPrice = 10800;
-        capacitySpec = '1,000+ GPD • Dual/Commercial Aeration + Pumped Dosing Chamber';
+        maxPrice = 11500;
+        capacitySpec = '1,000+ GPD • Custom Fabricated Steel or Precast Plant + Dosing Chamber';
       }
       if (soil === 'small_lot') {
         minPrice += 650;
@@ -474,15 +551,15 @@ function initEstimatorCalculator() {
       } else {
         codeRule = 'LAC Title 51 Part XIII Individual Mechanical Plant (Form LHS-47)';
       }
-      licenseUsed = 'LDH Basic #30733 & Combination #183 (Delta & AeroGreen Certified)';
+      licenseUsed = 'LDH Basic #30733 & Combination #183 (In-House Tank Plant)';
     } else if (service === 'conventional') {
       if (bedrooms <= 3) {
-        systemTitle = '1,000-Gal Precast Concrete Septic Tank + Absorption Field Lines';
+        systemTitle = '1,000-Gal In-House Precast Concrete Septic Tank + Field Lines';
         minPrice = 4400;
         maxPrice = 5900;
         capacitySpec = '1,000 Gal Precast Concrete Tank + 200–250 LF Subsurface Field';
       } else if (bedrooms === 4) {
-        systemTitle = '1,250-Gal Precast Concrete Septic Tank + Expanded Absorption Field';
+        systemTitle = '1,250-Gal In-House Precast Concrete Septic Tank + Expanded Field';
         minPrice = 5100;
         maxPrice = 6700;
         capacitySpec = '1,250 Gal Precast Concrete Tank + 275–325 LF Subsurface Field';
@@ -497,13 +574,13 @@ function initEstimatorCalculator() {
       } else {
         codeRule = 'LAC Title 51 Part XIII Subsurface Absorption System (Form LHS-47)';
       }
-      licenseUsed = 'LDH Basic #30733 • On-Site Precast Concrete & Excavation';
+      licenseUsed = 'LDH Basic #30733 • Cast On-Site at 11751 LA-365';
     } else if (service === 'repair') {
-      systemTitle = 'Aerator Compressor, Control Panel, Pump or Field Line Repair';
+      systemTitle = 'Aerator Compressor, Control Panel, Pump or Inspection Service';
       minPrice = 245;
       maxPrice = 890;
       capacitySpec = 'Linear Air Compressor, Diaphragm Rebuild, Float Switch or Effluent Pump';
-      codeRule = 'OEM NSF-40 Compliant Replacement Components';
+      codeRule = 'OEM NSF-40 Compliant Replacement Components & Inspections';
       licenseUsed = 'LDH Combination Installer & Maintenance Provider #183';
     } else if (service === 'dirtwork') {
       systemTitle = 'Mack Tandem Dump Truck Hauling, House Pad & Culvert Package';
@@ -652,6 +729,52 @@ function initParishTabs() {
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => selectParish(tab.dataset.parish));
+  });
+}
+
+/* 8b. Dual-Facility Map Switcher (Main HQ vs. Wingate Dumpsite GPS) */
+function initFacilityMapSwitcher() {
+  const buttons = document.querySelectorAll('.facility-map-btn');
+  const iframe = document.getElementById('facilityMapEmbed');
+  const titleEl = document.getElementById('facilityMapTitle');
+  const subEl = document.getElementById('facilityMapSub');
+  const dirBtn = document.getElementById('facilityDirectionsBtn');
+
+  if (!buttons.length || !iframe) return;
+
+  const locations = {
+    hq: {
+      src: 'https://www.google.com/maps?q=11751+LA-365,+Church+Point,+LA+70525&output=embed',
+      title: '📍 Main HQ & Tank Manufacturing Plant: 11751 LA-365, Church Point, LA 70525',
+      sub: 'Acadia Parish • 3-Ton Bridge Crane Shop, Precast Concrete & Welded Steel Tank Plant',
+      dir: 'https://www.google.com/maps/dir/?api=1&destination=11751+LA-365+Church+Point+LA+70525',
+      btnText: '🗺️ Directions to HQ (11751 LA-365)'
+    },
+    dumpsite: {
+      src: 'https://www.google.com/maps?q=30.355829,-92.127946&t=k&z=18&output=embed',
+      title: '🛰️ Wingate Treatment Site (Septage Dumpsite): 30.355829° N, -92.127946° W',
+      sub: 'Duck Rd, Sunset, LA 70584 (St. Landry Parish) • LDEQ AI #165383 / #LA0124893 • M–F 7AM–5PM',
+      dir: 'https://www.google.com/maps/dir/?api=1&destination=30.355829,-92.127946',
+      btnText: '🛰️ GPS to Dumpsite (30.355829, -92.127946)'
+    }
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.facility;
+      const loc = locations[key];
+      if (!loc) return;
+
+      iframe.src = loc.src;
+      if (titleEl) titleEl.textContent = loc.title;
+      if (subEl) subEl.textContent = loc.sub;
+      if (dirBtn) {
+        dirBtn.href = loc.dir;
+        dirBtn.textContent = loc.btnText;
+      }
+
+      buttons.forEach((b) => b.classList.toggle('active', b === btn));
+    });
   });
 }
 

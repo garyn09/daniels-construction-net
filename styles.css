@@ -1,6 +1,6 @@
 /* ==========================================================================
    DANIEL'S CONSTRUCTION (DANIELS CONSTRUCTION OF CP, LLC)
-   12006 Branch Hwy, Church Point, LA 70525 | (337) 684-5394
+   11751 LA-365, Church Point, LA 70525 | (337) 684-5394
    Industrial Civil & Wastewater Engineering Design System
    ========================================================================== */
 
@@ -556,7 +556,7 @@ textarea {
 
 .hero-thumbs {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.55rem;
   margin-top: 0.8rem;
 }
@@ -1395,10 +1395,108 @@ textarea {
 
 .map-embed {
   width: 100%;
-  height: 360px;
+  height: 380px;
   border: 0;
   border-radius: var(--radius-md);
   filter: contrast(1.04);
+}
+
+/* ==========================================================================
+   WINGATE TREATMENT SITE / SEPTAGE DUMPSITE COMMAND SECTION
+   ========================================================================== */
+.dumpsite-hero-banner {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.96) 0%, rgba(11, 15, 20, 0.98) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(245, 158, 11, 0.12);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.dumpsite-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--gold-500),
+    var(--gold-500) 14px,
+    #0b0f14 14px,
+    #0b0f14 28px
+  );
+}
+
+.dumpsite-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.gps-telemetry-box {
+  background: #070a0f;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  font-family: var(--font-mono);
+}
+
+.gps-coords-large {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-weight: 700;
+  color: var(--emerald-400);
+  letter-spacing: 0.03em;
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.dumpsite-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.dumpsite-stage-card {
+  background: var(--bg-gunmetal);
+  border: 1px solid var(--border-strong);
+  border-top: 3px solid var(--emerald-500);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+}
+
+.facility-map-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.facility-map-btn {
+  flex: 1;
+  min-width: 220px;
+  background: var(--bg-obsidian);
+  border: 1px solid var(--border-strong);
+  color: var(--text-steel);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.facility-map-btn.active,
+.facility-map-btn:hover {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: var(--gold-400);
+  color: var(--gold-400);
 }
 
 /* ==========================================================================
@@ -1625,12 +1723,14 @@ textarea {
   .diagnostic-layout,
   .coverage-grid,
   .dispatch-grid,
-  .parish-detail-card {
+  .parish-detail-card,
+  .dumpsite-grid {
     grid-template-columns: 1fr;
   }
 
   .authority-grid,
-  .footer-grid {
+  .footer-grid,
+  .dumpsite-stages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1674,12 +1774,17 @@ textarea {
   .form-row-2,
   .checkbox-grid,
   .hero-trust-grid,
-  .town-badges-grid {
+  .town-badges-grid,
+  .dumpsite-stages-grid {
     grid-template-columns: 1fr;
   }
 
   .fleet-card.span-6,
   .fleet-card.span-4 {
     grid-column: span 12;
+  }
+
+  .hero-thumbs {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
