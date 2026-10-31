@@ -7,10 +7,10 @@
 const FLEET_PHOTOS = [
   {
     src: './images/hq-main-building-flag.jpg',
-    badge: 'HEADQUARTERS & PLANT // 11751 LA-365, CHURCH POINT, LA',
+    badge: 'HEADQUARTERS & PLANT // 11751 LA-365 (30.347005, -92.203293)',
     title: "Daniel's Construction Headquarters & Manufacturing Shop (11751 LA-365)",
-    subtitle: 'Banner: "Install Residential Treatment Systems, Maintenance Pump Out & Inspections • 337-684-5394"',
-    specs: ['11751 LA-365', '3-Ton Bridge Crane Shop', 'In-House Tank Plant', '337-684-5394']
+    subtitle: 'GPS: 30.347005° N, -92.203293° W (Driveway: 30.347719, -92.203234) • Banner: "Install Residential Treatment Systems, Maintenance Pump Out & Inspections • 337-684-5394"',
+    specs: ['GPS: 30.347005, -92.203293', '11751 LA-365 (Branch Hwy)', '3-Ton Bridge Crane Shop', '337-684-5394']
   },
   {
     src: './images/aerial-facility-overview.jpg',
@@ -144,6 +144,76 @@ const FLEET_PHOTOS = [
     title: 'Precast Tank Section with Galvanized Air-Drop Manifolds & Pour Hoppers',
     subtitle: 'Shows galvanized aeration drop pipes, lifting spreader beam, residential precast ATU tanks, and steel concrete pouring hoppers',
     specs: ['Galvanized Air Drops', 'Concrete Pour Hoppers', 'Residential & Commercial', 'Church Point, LA']
+  },
+  {
+    src: './images/precast-4high-stacked-basins.jpg',
+    badge: 'PRECAST INVENTORY // 4-HIGH STACKED CONCRETE BASINS (11751 LA-365)',
+    title: '4-High Stack of Cured Precast Concrete Tank Sections & Spreader Bar',
+    subtitle: 'Heavy recessed-panel precast concrete tank sections stacked four-high inside our 11751 LA-365 fabrication bay with steel lifting beam and chains',
+    specs: ['4-High Cured Stack', 'Recessed Structural Wall', 'Cast-In Pipe Ports', 'GPS: 30.347005, -92.203293']
+  },
+  {
+    src: './images/precast-tank-green-riser-demold.jpg',
+    badge: 'PRECAST DEMOLDING // GREEN POLY RISER & HINGED STEEL FORM',
+    title: 'Precast Concrete Septic / ATU Tank with Green Access Riser in Hinged Steel Mold',
+    subtitle: 'Shows a cured residential precast concrete tank with cast-in green access riser collar, rubber pipe boot, and hinged steel outer mold wall dropped open',
+    specs: ['Green Access Riser', 'Hinged Steel Form', 'Cast-In Lifting Loops', 'Watertight Pipe Boot']
+  },
+  {
+    src: './images/precast-steel-mold-turnover-beam.jpg',
+    badge: 'HEAVY FORMWORK // STEEL PRECAST MOLD & TURNOVER TRUNNION BEAM',
+    title: 'Heavy Steel Precast Tank Mold with Side Turnover Beam & Stacked Forms',
+    subtitle: 'Precision heavy-gauge steel tank form with smooth core plates, corner locking pins, heavy side turnover beam, and stacked forms/wire cages behind',
+    specs: ['Steel Tank Mold', 'Turnover Trunnion Beam', 'Rebar Wire Cages', '11751 LA-365 Shop']
+  },
+  {
+    src: './images/precast-4high-ladders-hydraulic-pump.jpg',
+    badge: 'PRECAST BAY // 4-HIGH TANK STACK, SHOP LADDERS & HYDRAULIC RIGGING',
+    title: '4-High Precast Concrete Tank Stack with Shop Ladders & Hydraulic Pump Cart',
+    subtitle: 'Inside the 11751 LA-365 precast bay looking toward the outdoor concrete batching tower with four stacked tank sections and hydraulic rigging gear',
+    specs: ['4-High Precast Stack', 'Hydraulic Form Release', 'Batch Tower Adjoining', '11751 LA-365']
+  },
+  {
+    src: './images/batch-tower-aggregate-bunkers.jpg',
+    badge: 'CONCRETE BATCH PLANT // ELEVATED HOPPER TOWER & AGGREGATE BUNKERS',
+    title: 'On-Site Concrete Batching Tower & Washed Sand / Gravel Aggregate Bunkers',
+    subtitle: 'Located at 11751 LA-365 (30.347005, -92.203293): elevated steel batching hopper tower, concrete retaining wall bunkers with washed gravel & sand, and loader',
+    specs: ['Batching Hopper Tower', 'Sand & Gravel Bunkers', '11751 LA-365', 'GPS: 30.347005, -92.203293']
+  },
+  {
+    src: './images/batch-tower-pipe-rack-yard.jpg',
+    badge: 'MANUFACTURING COMPLEX // BATCH TOWER, PIPE RACK & TANK TRAILER',
+    title: 'Concrete Batching Plant, PVC Pipe Inventory, Chambers & Delivery Trailer',
+    subtitle: 'Shows the adjoining blue main shop roof, red-and-gray batching building, elevated hopper tower, leach-field chambers, PVC pipe stack, and tank trailer',
+    specs: ['Batching Building', 'Leach Field Chambers', 'PVC Pipe Stock', 'Tank Delivery Trailer']
+  },
+  {
+    src: './images/equipment-canopy-cat-military-6x6.jpg',
+    badge: 'HEAVY EQUIPMENT CANOPY // JLG, CAT TRACK LOADER & 6x6 WORK TRUCK',
+    title: '11751 LA-365 Equipment Canopy — JLG Telehandler, CAT Loader & 6x6 Truck',
+    subtitle: 'Ground-level view under our heavy equipment canopy housing the JLG SkyTrak telehandler, CAT compact track loader, 6x6 heavy work truck, and trailers',
+    specs: ['JLG Telehandler', 'CAT Track Loader', '6x6 Heavy Truck', 'Gooseneck Trailers']
+  },
+  {
+    src: './images/hq-flag-and-shop-wide.jpg',
+    badge: '11751 LA-365 HEADQUARTERS // AMERICAN FLAG & FABRICATION BAYS',
+    title: "American Flag Flying Over Daniel's Construction Headquarters (11751 LA-365)",
+    subtitle: 'Wide exterior view at 30.347005° N, -92.203293° W showing the American flag, main shop banner, welded steel package plant, and 4-high precast tank stack',
+    specs: ['11751 LA-365', 'GPS: 30.347005, -92.203293', 'Precast & Steel Bays', '337-684-5394']
+  },
+  {
+    src: './images/hq-driveway-approach.jpg',
+    badge: 'TRUCK DRIVEWAY APPROACH // 11751 LA-365 (30.347719, -92.203234)',
+    title: "Limestone Truck Driveway Entrance at 11751 LA-365 (Branch Hwy)",
+    subtitle: 'Heavy crushed-limestone driveway entrance off LA-365 (30.347719° N, -92.203234° W) leading directly into the open-span crane and tank fabrication bay',
+    specs: ['Driveway: 30.347719, -92.203234', 'Heavy Truck Access', 'Open-Span Crane Bay', 'Church Point, LA']
+  },
+  {
+    src: './images/hq-front-lawn-shop.jpg',
+    badge: 'MAIN SHOP EXTERIOR // OPEN FABRICATION BAY & ENCLOSED ROLL-UP BAY',
+    title: "Full Front View of Daniel's Construction Main Shop & High-Bay Roll-Up Door",
+    subtitle: 'Blue steel headquarters complex at 11751 LA-365 featuring the open-air 3-ton crane fabrication bay on the left and enclosed high-bay shop on the right',
+    specs: ['11751 LA-365', '30.347005, -92.203293', 'High-Bay Roll-Up Door', 'Acadia Parish, LA']
   }
 ];
 
@@ -829,11 +899,11 @@ function initFacilityMapSwitcher() {
 
   const locations = {
     hq: {
-      src: 'https://www.google.com/maps?q=11751+LA-365,+Church+Point,+LA+70525&output=embed',
-      title: '📍 Main HQ & Tank Manufacturing Plant: 11751 LA-365, Church Point, LA 70525',
-      sub: 'Acadia Parish • 3-Ton Bridge Crane Shop, Precast Concrete & Welded Steel Tank Plant',
-      dir: 'https://www.google.com/maps/dir/?api=1&destination=11751+LA-365+Church+Point+LA+70525',
-      btnText: '🗺️ Directions to HQ (11751 LA-365)'
+      src: 'https://www.google.com/maps?q=30.347005,-92.203293&t=k&z=18&output=embed',
+      title: '📍 Main HQ & Tank Manufacturing Plant: 11751 LA-365 (30.347005° N, -92.203293° W)',
+      sub: '11751 LA-365 (Branch Hwy), Church Point, LA 70525 • Driveway GPS: 30.347719, -92.203234 • 3-Ton Crane, Precast & Steel Plant',
+      dir: 'https://www.google.com/maps/dir/?api=1&destination=30.347005,-92.203293',
+      btnText: '🛰️ GPS to Main HQ (30.347005, -92.203293)'
     },
     dumpsite: {
       src: 'https://www.google.com/maps?q=30.355829,-92.127946&t=k&z=18&output=embed',
