@@ -1,3 +1,5 @@
+import { assetFor } from './image-assets.js';
+
 /* ==========================================================================
    DANIEL'S CONSTRUCTION (DANIELS CONSTRUCTION OF CP, LLC)
    11751 LA-365, Church Point, LA 70525 | (337) 684-5394
@@ -434,6 +436,33 @@ function initMobileMenu() {
   });
 }
 
+
+/* Point a <picture> at the same optimized files used in the markup. */
+function paintOptimizedPhoto(img, src, mode) {
+  const photo = assetFor(src);
+  if (!photo) {
+    img.src = src;
+    return;
+  }
+  const picture = img.closest('picture');
+  const webpSource = picture ? picture.querySelector('source[type="image/webp"]') : null;
+  if (mode === 'lightbox') {
+    if (webpSource) webpSource.srcset = photo.webp;
+    img.srcset = photo.jpg;
+    img.src = photo.jpg;
+    img.width = photo.width;
+    img.height = photo.height;
+    return;
+  }
+  if (webpSource) {
+    webpSource.srcset = `${photo.thumbWebp} ${photo.thumbWidth}w, ${photo.webp} ${photo.width}w`;
+  }
+  img.srcset = `${photo.thumbJpg} ${photo.thumbWidth}w, ${photo.jpg} ${photo.width}w`;
+  img.src = photo.jpg;
+  img.width = photo.width;
+  img.height = photo.height;
+}
+
 /* 2. Hero Fleet Photo Switcher */
 function initHeroPhotoSwitcher() {
   const heroImg = document.getElementById('heroMainImg');
@@ -451,7 +480,7 @@ function initHeroPhotoSwitcher() {
       const item = FLEET_PHOTOS[idx];
       if (!item) return;
 
-      heroImg.src = item.src;
+      paintOptimizedPhoto(heroImg, item.src, 'full');
       heroImg.alt = item.title;
       if (heroFrame) heroFrame.setAttribute('data-lightbox-index', String(idx));
       if (heroBadge) heroBadge.textContent = item.badge;
@@ -480,7 +509,7 @@ function initShopSpotlightSwitcher() {
       const item = FLEET_PHOTOS[idx];
       if (!item) return;
 
-      mainImg.src = item.src;
+      paintOptimizedPhoto(mainImg, item.src, 'full');
       mainImg.alt = item.title;
       if (mainFrame) mainFrame.setAttribute('data-lightbox-index', String(idx));
       if (mainTag) mainTag.textContent = item.badge;
@@ -533,7 +562,7 @@ function initLightbox() {
   function showSlide(index) {
     currentLightboxIndex = (index + FLEET_PHOTOS.length) % FLEET_PHOTOS.length;
     const item = FLEET_PHOTOS[currentLightboxIndex];
-    modalImg.src = item.src;
+    paintOptimizedPhoto(modalImg, item.src, 'lightbox');
     modalImg.alt = item.title;
     modalTitle.textContent = item.title;
     modalSub.textContent = item.subtitle;
